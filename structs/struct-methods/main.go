@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // Person is really good struct :)
 type Person struct {
 	ID   int
@@ -30,7 +28,7 @@ func main() {
 	pers := new(Person)
 	pers.SetName("Max Prosper")
 	// (&pers).SetName("Max Prosper")
-	fmt.Printf("updated person: %#v\n", pers)
+	// fmt.Printf("updated person: %#v\n", pers)
 
 	var acc = Account{
 		ID:   1,
