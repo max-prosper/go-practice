@@ -2,23 +2,25 @@ package main
 
 import "fmt"
 
+// Person is really good struct :)
 type Person struct {
-	Id   int
+	ID   int
 	Name string
 }
 
-// Won't change an original stuct
+// UpdateName won't change an original stuct
 func (p Person) UpdateName(name string) {
 	p.Name = name
 }
 
-// Will change an original stuct
+// SetName will change an original stuct
 func (p *Person) SetName(name string) {
 	p.Name = name
 }
 
+// Account is anotger really good struct :)
 type Account struct {
-	Id   int
+	ID   int
 	Name string
 	Person
 }
@@ -30,11 +32,11 @@ func main() {
 	// (&pers).SetName("Max Prosper")
 	fmt.Printf("updated person: %#v\n", pers)
 
-	var acc Account = Account{
-		Id:   1,
+	var acc = Account{
+		ID:   1,
 		Name: "Max",
 		Person: Person{
-			Id:   2,
+			ID:   2,
 			Name: "Max Prosper",
 		},
 	}
